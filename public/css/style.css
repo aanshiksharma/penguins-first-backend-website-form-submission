@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 4rem;
+}
+
+
+/* Tag Specific Classes */
+body{
+    background: #1e1e1e;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.7;
+}
+
+code{
+    background: #101010;
+    padding: 0.1em 0.4em;
+}
+
+hr{
+    margin-block: 1.5rem;
+}
+
+
+/* Header */
+header{
+    background: linear-gradient(-45deg, #560ca0, #944adf) fixed;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+}
+
+header>.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    letter-spacing: 0.4em;
+}
+
+.primary-navigation{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.primary-navigation a{
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    position: relative;
+    padding: 0.4em 2em;
+}
+
+.primary-navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: #944adf;
+    transition: transform 200ms ease-out;
+    z-index: -1;
+}
+
+.primary-navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+/* Main */
+/* Hero Section */
+.hero{
+    min-height: 33rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #560ca0, #944adf) fixed;
+}
+
+.hero h1{
+    font-size: 3rem;
+}
+
+
+/* About Section */
+.about{
+    margin-block: 2rem;
+}
+
+.about h2{
+    line-height: normal;
+    margin-bottom: 1em;
+}
+
+
+
+/* Form */
+.form{
+    display: grid;
+    gap: 1.5em;
+    margin-block: 2rem;
+}
+
+.form :where(input, textarea){
+    width: 100%;
+    resize: none;
+    outline: 0;
+    border: 1px solid #555;
+    padding: 0.4em 0.3em;
+    font-size: 1rem;
+    font-family: sans-serif;
+    background: transparent;
+    color: white;
+    transition: 200ms ease-out;
+}
+
+.form :where(input, textarea)::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+.form :where(input, textarea):focus{
+    border-color: #2c70a8;
+    box-shadow: 0 0 4px #2c70a8;
+}
+
+.form button{
+    --button-border-color: #944adf;
+    background: #944adf;
+    justify-self: flex-end;
+}
+
+.form button:hover{
+    background: transparent;
+    color: #944adf;
+}
+
+
+/* Wrappers */
+.wrapper{
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.wrapper-1{
+    max-width: 84ch;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.wrapper-2{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+
+
+
+/* Utility Classes */
+.text-center{
+    text-align: center;
+}
+
+.monospace{
+    font-family: monospace;
+}
+
+.btn{
+    padding: 0.4em 2em;
+    border-radius: 2px;
+    border: 2px solid var(--button-border-color);
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: 2px solid #560ca0;
+    outline-offset: -0.3em;
+}

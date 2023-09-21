@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission - Backend Project</title>
+
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- Script Link -->
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">BACKEND - NODE.JS</div>
+            <nav>
+                <ul class="primary-navigation">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#form">Jump to Form</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="wrapper">
+        <section class="hero text-center">
+            <h1>Form Submission Project</h1>
+        </section>
+
+        <article class="about wrapper-1" id="about">
+            <h2>About this Project</h2>
+            <p>This is a self thought, little middle of the night thinking, experimental, project.</p>
+            <p>In this project, we will submit a form and save the data in a simple <code>formData.txt</code> file as a String object.</p>
+            <hr>
+            <p class="monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ex. Enim officia placeat et porro laboriosam optio, ut sint quasi debitis. Eum eos ratione exercitationem. Tempora tenetur sequi perspiciatis voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam eos inventore enim, facere molestiae, officiis delectus natus quas officia nihil voluptatibus a repellat commodi? Excepturi aspernatur et vitae itaque omnis?</p>
+        </article>
+
+        <div class="wrapper-2">
+            <hr>
+        </div>
+
+        <section class="form-section" id="form">
+            <h2 class="text-center">Let's Fill This Form and Submit and Save it in our Text File</h2>
+
+            <form action="/" method="post" class="form wrapper-1">
+                <input type="text" name="name" id="name" placeholder="Name">
+                
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                
+                <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
